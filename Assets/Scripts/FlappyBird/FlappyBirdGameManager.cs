@@ -27,8 +27,14 @@ public class FlappyBirdGameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("Game Over");
+        if (GameManager.Instance.FlappyBirdBestScore < currentScore)
+            GameManager.Instance.FlappyBirdBestScore = currentScore;
         uiManager.SetRestart();
+    }
+    
+    public void BackMainScene()
+    {
+        SceneManager.LoadScene("Main Scece");
     }
 
     public void RestartGame()

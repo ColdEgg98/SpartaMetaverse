@@ -2223,7 +2223,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Over!\nHigh score : \nFress Space to Restart\n"
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da23ea5ac17fb054cb63735c321da960, type: 2}
   m_sharedMaterial: {fileID: -2156097146807243578, guid: da23ea5ac17fb054cb63735c321da960, type: 2}

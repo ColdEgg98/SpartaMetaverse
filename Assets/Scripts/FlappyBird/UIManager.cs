@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
 
     public void SetRestart()
     {
+        restartText.text = $"Game Over!\r\nHigh score : {GameManager.Instance.FlappyBirdBestScore}\r\nFress Space to Restart";
         restartText.gameObject.SetActive(true);
     }
 

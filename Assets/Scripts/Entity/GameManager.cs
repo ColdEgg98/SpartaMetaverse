@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public GameObject PlayerObject;
     public SpriteRenderer test_SpriteRenderer;
     public Sprite test_Sprite;
-    
+
+    public int FlappyBirdBestScore = 0;
+
+
     public string ButtonName {  get; set; }
 
     private void Awake()

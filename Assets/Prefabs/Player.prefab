@@ -228,7 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 7701137775480087242}
-  cam: {fileID: 0}
 --- !u!114 &5357607669964769550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,3 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e190858d695a0b4486d9a83855fc9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: 0}
+  AniController:
+  - {fileID: 22100000, guid: 03606a58603bf02479077176b36ecbad, type: 2}
+  - {fileID: 22100000, guid: dbd33d50a7b23f84c88fcd0521fab36b, type: 2}
+  - {fileID: 22100000, guid: 7476326dfc0b9344284166ec08b30f75, type: 2}
+  - {fileID: 22100000, guid: 3ca26dd6bd228ac479b74c09aa585a63, type: 2}
