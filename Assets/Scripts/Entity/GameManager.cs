@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Serialize] private GameObject PlayerObject;
+
     private static bool isInitialized = false;
     private Transform pivotTransform;
 
