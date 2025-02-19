@@ -8,7 +8,11 @@ public class ChangeSprite : MonoBehaviour
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = MainPlayer.instance.ReturnSprite();
+        if (GameManager.Instance != null)
+        {
+            Debug.Log("GameManager instance가 존재함.");
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = GameManager.Instance.test_SpriteRenderer.sprite;
+        }
     }
 }

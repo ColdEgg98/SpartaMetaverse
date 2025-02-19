@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pivot
   - BackGround
+  - SelectUI
   layers:
   - Default
   - TransparentFX

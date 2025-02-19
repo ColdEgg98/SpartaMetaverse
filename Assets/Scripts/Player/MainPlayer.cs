@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour
 {
     public static MainPlayer instance { get; private set; }
+    public string CharaName { get; set; }
     [SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
     public Animator Animator { get; private set; }
     public Animation Animation { get; private set; }
@@ -26,8 +27,12 @@ public class MainPlayer : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public Sprite ReturnSprite()
+    public void ChangePlayerSprite(string name)
     {
-        return instance.SpriteRenderer.sprite;
+        Debug.Log($"path : CharaSprite/{name}/{name}_idle_anim_16x16");
+        if (Resources.Load<Sprite>($"CharaSprite/{name}/{name}_idle_anim_16x16") == null)
+            Debug.Log("CharaSprite is null");
+        else
+            SpriteRenderer.sprite = Resources.Load<Sprite>($"CharaSprite/{name}/{name}_idle_anim_16x16_18");
     }
 }

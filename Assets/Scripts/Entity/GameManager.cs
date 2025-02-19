@@ -5,13 +5,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject PlayerObject;
+    public static GameManager Instance;
 
+    public GameObject PlayerObject;
     public SpriteRenderer test_SpriteRenderer;
     public Sprite test_Sprite;
+    
+    public string ButtonName {  get; set; }
 
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
         Application.targetFrameRate = 60;
         DontDestroyOnLoad(gameObject);
 
@@ -28,7 +36,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameManager : instance »Æ¿Œ");
             test_SpriteRenderer = GetComponent<SpriteRenderer>();
             test_Sprite = GetComponent<Sprite>();
-            test_SpriteRenderer.sprite = MainPlayer.instance.ReturnSprite();
+            test_SpriteRenderer.sprite = MainPlayer.instance.SpriteRenderer.sprite;
             test_Sprite = test_SpriteRenderer.sprite;
         }
     }

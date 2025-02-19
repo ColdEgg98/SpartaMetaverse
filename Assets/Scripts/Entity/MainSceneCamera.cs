@@ -6,20 +6,12 @@ public class MainSceneCamera : MonoBehaviour
 {
     public float smoothSpeed = 0.01f;
     public Vector2 cameraOffset;
-    //public Transform? playerTransform;
 
     private void Start()
     {
-        //Invoke("SetPosition", 1f);
+
     }
 
-    //void SetPosition()
-    //{
-    //    Debug.Log("SetPosition : On");
-    //    playerTransform.position = GameObject.FindWithTag("Player").transform.position;
-    //}
-
-    // Update is called once per frame
     void LateUpdate()
     {
         if (MainPlayer.instance != null)
