@@ -18,7 +18,7 @@ public class NPCTextOut : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            _textMeshPro.text = "Press F";
+            _textMeshPro.text = "F를 누르면 미니게임을 시작합니다!";
     }
 
     private void OnTriggerExit2D(Collider2D collision)
