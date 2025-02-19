@@ -359,7 +359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -344.77, y: -187.42}
+  m_AnchoredPosition: {x: -412.31, y: -226.83}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &150667299006067535
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "F\uB97C \uB20C\uB7EC\n\uBBF8\uB2C8\uAC8C\uC784!"
+  m_text: "NPC \uB300\uC0AC\uAC00 \uCD9C\uB825\uB429\uB2C8\uB2E4!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da23ea5ac17fb054cb63735c321da960, type: 2}
   m_sharedMaterial: {fileID: -2156097146807243578, guid: da23ea5ac17fb054cb63735c321da960, type: 2}

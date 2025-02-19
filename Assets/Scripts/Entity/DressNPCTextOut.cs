@@ -6,6 +6,7 @@ using UnityEngine;
 public class DressNPCTextOut : MonoBehaviour
 {
     [SerializeField] private TextMeshPro _textMeshPro;
+    public GameObject CharacterChangeUI;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,17 @@ public class DressNPCTextOut : MonoBehaviour
             _textMeshPro.text = "F를 누르면 아바타를 바꿀 수 있습니다!";
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            CharacterChangeUI.SetActive(true);
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         _textMeshPro.text = "";
+        CharacterChangeUI.SetActive(false);
     }
 }

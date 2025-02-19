@@ -5,7 +5,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerMoveHandler : BaseHandler
 {
-    public Camera cam;
+    private Camera cam;
 
     protected override void Start()
     {

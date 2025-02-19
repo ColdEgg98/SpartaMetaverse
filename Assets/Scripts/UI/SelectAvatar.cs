@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class SelectAvatar : MonoBehaviour
 {
+    public GameObject CharacterChangeUI;
+
     private Button button;
 
     private void Start()
@@ -16,6 +18,8 @@ public class SelectAvatar : MonoBehaviour
 
     public void ButtonClick(Button clickButton)
     {
+        CharacterChangeUI.SetActive(false);
+
         string btnName = clickButton.name;
         btnName = btnName.Replace(" Image", null);
         if (MainPlayer.instance != null)
