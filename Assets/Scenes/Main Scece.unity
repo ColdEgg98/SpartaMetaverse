@@ -2869,6 +2869,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 432069937922376951, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545219409876775938, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545219409876775938, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545219409876775938, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545219409876775938, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545219409876775938, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699819314749817623, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -432.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699819314749817623, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -224.36
+      objectReference: {fileID: 0}
     - target: {fileID: 7759545084301320610, guid: 5306a2827bc2c01419cb8caa07edb3a3, type: 3}
       propertyPath: m_Name
       value: Dress NPC
@@ -3003,6 +3035,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 376503740889996137, guid: 954a5d32565e78c46ac6bcd59a82135e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -407.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 376503740889996137, guid: 954a5d32565e78c46ac6bcd59a82135e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -224.36
+      objectReference: {fileID: 0}
     - target: {fileID: 408224490913131891, guid: 954a5d32565e78c46ac6bcd59a82135e, type: 3}
       propertyPath: m_Name
       value: NPC
