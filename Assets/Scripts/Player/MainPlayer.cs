@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour
 {
     public static MainPlayer instance { get; private set; }
-    public SpriteRenderer SpriteRenderer { get; private set; }
+    [SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
     public Animator Animator { get; private set; }
     public Animation Animation { get; private set; }
     private void Awake()
@@ -24,5 +24,10 @@ public class MainPlayer : MonoBehaviour
         Animation = GetComponentInChildren<Animation>();
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    public Sprite ReturnSprite()
+    {
+        return instance.SpriteRenderer.sprite;
     }
 }

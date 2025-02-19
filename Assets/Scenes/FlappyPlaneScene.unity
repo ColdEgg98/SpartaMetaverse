@@ -1419,7 +1419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flapForce: 6
   forwardSpeed: 3
-  godMode: 1
+  godMode: 0
   isDead: 0
 --- !u!4 &713342556
 Transform:
