@@ -12,8 +12,8 @@ public class Obstacle : MonoBehaviour
     public float highPosY = 1f;
     public float lowPosY = -1f;
 
-    public float holeSizeMin = 1f;
-    public float holeSizeMax = 3f;
+    public float holeSizeMin = 3f;
+    public float holeSizeMax = 7f;
 
     public float widthPadding = 4f;
 

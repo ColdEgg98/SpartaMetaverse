@@ -20,6 +20,7 @@ public class MiniGameLoad : MonoBehaviour
                     string SceneName;
                     SceneName = sceneAsset.name;
                     SceneManager.LoadScene(SceneName);
+
                 }
             }
         }

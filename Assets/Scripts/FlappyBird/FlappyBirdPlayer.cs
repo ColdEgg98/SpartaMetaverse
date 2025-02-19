@@ -27,7 +27,8 @@ public class FlappyBirdPlayer : MonoBehaviour
         gameManager = FlappyBirdGameManager.Instance;
 
         animator = GetComponentInChildren<Animator>();
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponentInChildren<Rigidbody2D>();
+
 
         if (animator == null)
             Debug.LogError("Not Founded Animator");

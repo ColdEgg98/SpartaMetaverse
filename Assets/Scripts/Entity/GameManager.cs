@@ -5,30 +5,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Serialize] private GameObject PlayerObject;
-
-    private static bool isInitialized = false;
-    private Transform pivotTransform;
+    public GameObject PlayerObject;
 
     private void Awake()
     {
         Application.targetFrameRate = 60;
-
-        if (isInitialized)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
         DontDestroyOnLoad(gameObject);
-        isInitialized = true;
 
-        PlayerGoPivot();
+        if (MainPlayer.instance == null)
+            InitPlayerObject();
     }
 
-    void PlayerGoPivot()
+    void InitPlayerObject()
     {
-        GameObject.FindWithTag("Player").gameObject.transform.position = FindPlayerPivot().position;
+        Instantiate(PlayerObject, FindPlayerPivot());
     }
 
     Transform FindPlayerPivot()
