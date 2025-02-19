@@ -23,6 +23,26 @@ public class SelectAvatar : MonoBehaviour
             MainPlayer.instance.CharaName = btnName;
             Debug.Log($"메인 캐릭 이름 : [{MainPlayer.instance.CharaName}]");
             MainPlayer.instance.ChangePlayerSprite(btnName);
+
+            int index = 0;
+
+            switch (btnName)
+            {
+                case "Bob":
+                    index = 0;
+                    break;
+                case "Adam":
+                    index = 1;
+                    break;
+                case "Amelia":
+                    index = 2;
+                    break;
+                case "Alex":
+                    index = 3;
+                    break;
+            }
+
+            MainPlayer.instance.ChangePlayerAnimator(index);
         }
     }
 }

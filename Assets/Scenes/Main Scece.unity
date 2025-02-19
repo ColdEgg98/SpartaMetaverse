@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 37957946}
   - component: {fileID: 37957945}
   m_Layer: 0
-  m_Name: Chara BackGounrd Panel
+  m_Name: Bob BackGounrd Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,12 +456,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 225339835}
-        m_TargetAssemblyTypeName: SelectAvarta, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: SelectAvatar, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 225339834}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 225339830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e192c45c15a59414498bbcbbcf1adf3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 29aaaf91c2f64834faa3a23fe773af42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &304778191
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 581323750}
   - component: {fileID: 581323749}
   m_Layer: 0
-  m_Name: Chara BackGounrd Panel (3)
+  m_Name: Amelia BackGounrd Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -849,6 +849,7 @@ GameObject:
   - component: {fileID: 664684744}
   - component: {fileID: 664684743}
   - component: {fileID: 664684745}
+  - component: {fileID: 664684746}
   m_Layer: 0
   m_Name: Adam Image
   m_TagString: Untagged
@@ -957,7 +958,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664684743}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 664684746}
+        m_TargetAssemblyTypeName: SelectAvatar, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 664684745}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &664684746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664684741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aaaf91c2f64834faa3a23fe773af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &689138012
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +995,7 @@ GameObject:
   - component: {fileID: 689138015}
   - component: {fileID: 689138014}
   m_Layer: 0
-  m_Name: Chara BackGounrd Panel (2)
+  m_Name: Alex BackGounrd Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1042,6 +1067,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 149076771070816018, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dbb506a96da5cc84ebcf830952d600bd, type: 2}
+    - target: {fileID: 5411403860128357089, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411403860128357089, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
+      propertyPath: AniController.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411403860128357089, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
+      propertyPath: AniController.Array.data[0]
+      value: 
+      objectReference: {fileID: 22100000, guid: 03606a58603bf02479077176b36ecbad, type: 2}
+    - target: {fileID: 5411403860128357089, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
+      propertyPath: AniController.Array.data[1]
+      value: 
+      objectReference: {fileID: 22100000, guid: dbd33d50a7b23f84c88fcd0521fab36b, type: 2}
+    - target: {fileID: 5411403860128357089, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
+      propertyPath: AniController.Array.data[2]
+      value: 
+      objectReference: {fileID: 22100000, guid: 7476326dfc0b9344284166ec08b30f75, type: 2}
+    - target: {fileID: 5411403860128357089, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
+      propertyPath: AniController.Array.data[3]
+      value: 
+      objectReference: {fileID: 22100000, guid: 3ca26dd6bd228ac479b74c09aa585a63, type: 2}
     - target: {fileID: 5850217416439771173, guid: 1a8be52228f2cf445842c024afec3841, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1237,6 +1290,7 @@ GameObject:
   - component: {fileID: 977446079}
   - component: {fileID: 977446078}
   - component: {fileID: 977446080}
+  - component: {fileID: 977446081}
   m_Layer: 0
   m_Name: Amelia Image
   m_TagString: Untagged
@@ -1345,7 +1399,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 977446078}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 977446081}
+        m_TargetAssemblyTypeName: SelectAvatar, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 977446080}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &977446081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977446076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aaaf91c2f64834faa3a23fe773af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1003371237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,6 +1670,7 @@ GameObject:
   - component: {fileID: 1136201958}
   - component: {fileID: 1136201957}
   - component: {fileID: 1136201959}
+  - component: {fileID: 1136201960}
   m_Layer: 0
   m_Name: Alex Image
   m_TagString: Untagged
@@ -1700,7 +1779,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1136201957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1136201960}
+        m_TargetAssemblyTypeName: SelectAvatar, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1136201959}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1136201960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136201955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aaaf91c2f64834faa3a23fe773af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1142653955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,7 +2164,7 @@ GameObject:
   - component: {fileID: 2082395358}
   - component: {fileID: 2082395357}
   m_Layer: 0
-  m_Name: Chara BackGounrd Panel (1)
+  m_Name: Adam BackGounrd Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2235,14 +2338,13 @@ GameObject:
   - component: {fileID: 5666064380494240356}
   - component: {fileID: 7177943786836743457}
   - component: {fileID: 2473663750771945900}
-  - component: {fileID: 7177943786836743458}
   m_Layer: 0
   m_Name: SelectAvartaUI
   m_TagString: SelectUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!483693784 &851950719542593805
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -5200,18 +5302,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &7177943786836743458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449024662570625585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aaaf91c2f64834faa3a23fe773af42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7405741619825905099
 Transform:
   m_ObjectHideFlags: 0

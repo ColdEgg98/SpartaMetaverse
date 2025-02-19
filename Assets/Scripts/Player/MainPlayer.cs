@@ -7,8 +7,10 @@ public class MainPlayer : MonoBehaviour
     public static MainPlayer instance { get; private set; }
     public string CharaName { get; set; }
     [SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
-    public Animator Animator { get; private set; }
-    public Animation Animation { get; private set; }
+
+    public Animator Animator;
+    public AnimatorOverrideController[] AniController;
+
     private void Awake()
     {
         if (instance == null)
@@ -22,9 +24,15 @@ public class MainPlayer : MonoBehaviour
 
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Animator = GetComponentInChildren<Animator>();
-        Animation = GetComponentInChildren<Animation>();
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void ChangePlayerAnimator(int index)
+    {
+        if (index < 0 || index >= AniController.Length)
+            return;
+        Animator.runtimeAnimatorController = AniController[index];
     }
 
     public void ChangePlayerSprite(string name)
