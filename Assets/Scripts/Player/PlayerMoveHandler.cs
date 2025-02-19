@@ -5,12 +5,12 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerMoveHandler : BaseHandler
 {
-    public Camera camera;
+    public Camera cam;
 
     protected override void Start()
     {
         base.Start();
-        camera = Camera.main;
+        cam = Camera.main;
     }
 
     protected override void HandleAction()
@@ -20,7 +20,7 @@ public class PlayerMoveHandler : BaseHandler
         movementDirection = new Vector2(horizontal, vertial).normalized;
 
         Vector2 mousePosition = Input.mousePosition;
-        Vector2 worldPos = camera.ScreenToWorldPoint(mousePosition);
+        Vector2 worldPos = cam.ScreenToWorldPoint(mousePosition);
         lookDirection = (worldPos - (Vector2)transform.position);
 
         if (lookDirection.magnitude < .9f)
