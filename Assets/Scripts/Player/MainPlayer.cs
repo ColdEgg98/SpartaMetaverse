@@ -6,7 +6,22 @@ public class MainPlayer : MonoBehaviour
 {
     public static MainPlayer instance { get; private set; }
     public string CharaName { get; set; } = "Bob";
-    [SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
+
+    public SpriteRenderer _SpriteRenderer;
+    public SpriteRenderer SpriteRender
+    {
+        get => _SpriteRenderer;
+        set
+        {   // 스프라이트 변화를 감지하고 이벤트 발생
+            if (_SpriteRenderer.sprite != value.sprite)
+            {
+                Debug.Log("이벤트 발생!");
+                _SpriteRenderer.sprite = value.sprite;  
+                onSpriteChange.Invoke(value.sprite);
+            }
+        }
+    }
+
 
     public Animator Animator;
     public AnimatorOverrideController[] AniController;
@@ -27,7 +42,7 @@ public class MainPlayer : MonoBehaviour
             return;
         }
 
-        SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Animator = GetComponentInChildren<Animator>();
 
         DontDestroyOnLoad(gameObject);
@@ -47,8 +62,7 @@ public class MainPlayer : MonoBehaviour
         Sprite newSprite = Resources.Load<Sprite>($"CharaSprite/{name}/_{name}_run_16x16_2");
         if (newSprite != null)
         {
-            SpriteRenderer.sprite = newSprite;
-            onSpriteChange?.Invoke(newSprite); // 이벤트 처리
+            _SpriteRenderer.sprite = newSprite;
         }
     }
 }

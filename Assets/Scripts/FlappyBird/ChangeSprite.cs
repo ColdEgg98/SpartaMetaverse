@@ -12,7 +12,7 @@ public class ChangeSprite : MonoBehaviour
         {
             Debug.Log("GameManager instance가 존재함.");
             spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = GameManager.Instance.test_SpriteRenderer.sprite;
+            spriteRenderer.sprite = GameManager.Instance._SaveSpriteRenderer.sprite;
         }
     }
 }
