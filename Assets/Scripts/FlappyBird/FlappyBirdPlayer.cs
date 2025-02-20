@@ -49,6 +49,7 @@ public class FlappyBirdPlayer : MonoBehaviour
                 {
                     gameManager.RestartGame();
                 }
+                // 메인 씬으로 돌아가기
                 else if (!(Input.GetKeyDown(KeyCode.Space)) && !(Input.GetMouseButtonDown(0)))
                 {
                     gameManager.BackMainScene();
@@ -59,7 +60,6 @@ public class FlappyBirdPlayer : MonoBehaviour
         }
         else
         {
-            // 마우스 버튼 0 == 좌클릭 || 스마트폰 터치
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
                 isFlap = true;
         }

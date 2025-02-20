@@ -16,6 +16,7 @@ public class SelectAvatar : MonoBehaviour
         button.onClick.AddListener(() => ButtonClick(button));
     }
 
+    // 클릭된 이미지 UI의 이름을 알아내고 그걸로 인덱스를 만듦
     public void ButtonClick(Button clickButton)
     {
         CharacterChangeUI.SetActive(false);

@@ -11,10 +11,8 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer test_SpriteRenderer;
     public Sprite test_Sprite;
 
+    // 플래피버드 미니게임 최고 점수 기록
     public int FlappyBirdBestScore = 0;
-
-
-    public string ButtonName {  get; set; }
 
     private void Awake()
     {

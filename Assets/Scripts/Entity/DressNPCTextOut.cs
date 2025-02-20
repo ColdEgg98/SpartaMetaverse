@@ -7,6 +7,7 @@ public class DressNPCTextOut : MonoBehaviour
 {
     [SerializeField] private TextMeshPro _textMeshPro;
     public GameObject CharacterChangeUI;
+    private bool isPlayerInTrigger = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +20,17 @@ public class DressNPCTextOut : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
             _textMeshPro.text = "F를 누르면 아바타를 바꿀 수 있습니다!";
+        isPlayerInTrigger = true;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if (isPlayerInTrigger)
         {
-            CharacterChangeUI.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                CharacterChangeUI.SetActive(true);
+            }
         }
     }
 
@@ -33,5 +38,6 @@ public class DressNPCTextOut : MonoBehaviour
     {
         _textMeshPro.text = "";
         CharacterChangeUI.SetActive(false);
+        isPlayerInTrigger = false;
     }
 }
