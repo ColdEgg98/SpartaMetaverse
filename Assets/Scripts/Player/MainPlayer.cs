@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour
 {
     public static MainPlayer instance { get; private set; }
-    public string CharaName { get; set; }
+    public string CharaName { get; set; } = "Bob";
     [SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
 
     public Animator Animator;

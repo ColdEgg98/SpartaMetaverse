@@ -49,7 +49,7 @@ public class FlappyBirdPlayer : MonoBehaviour
                 {
                     gameManager.RestartGame();
                 }
-                else
+                else if (!(Input.GetKeyDown(KeyCode.Space)) && !(Input.GetMouseButtonDown(0)))
                 {
                     gameManager.BackMainScene();
                 }

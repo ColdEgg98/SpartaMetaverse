@@ -20,8 +20,8 @@ public class SelectAvatar : MonoBehaviour
     {
         CharacterChangeUI.SetActive(false);
 
-        string btnName = clickButton.name;
-        btnName = btnName.Replace(" Image", null);
+        string btnName = (clickButton.name).Replace(" Image", null);
+
         if (MainPlayer.instance != null)
         {
             MainPlayer.instance.CharaName = btnName;
@@ -48,5 +48,7 @@ public class SelectAvatar : MonoBehaviour
 
             MainPlayer.instance.ChangePlayerAnimator(index);
         }
+        else
+            Debug.LogWarning("There is no instance");
     }
 }
