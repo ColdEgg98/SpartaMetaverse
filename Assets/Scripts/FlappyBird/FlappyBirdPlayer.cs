@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -7,6 +8,7 @@ public class FlappyBirdPlayer : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D _rigidbody;
+    SpriteRenderer _spriteRenderer;
 
     [Header("Value")]
     public float flapForce = 6f;
@@ -21,6 +23,8 @@ public class FlappyBirdPlayer : MonoBehaviour
 
     FlappyBirdGameManager gameManager;
 
+    MainPlayer player { get { return MainPlayer.instance; } }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +32,28 @@ public class FlappyBirdPlayer : MonoBehaviour
 
         animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponentInChildren<Rigidbody2D>();
-
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         if (animator == null)
             Debug.LogError("Not Founded Animator");
 
         if (_rigidbody == null)
             Debug.LogError("Not Founded Rigidbody2D");
+
+        if (_spriteRenderer == null)
+            Debug.LogError("Not Founded SpriteRenderer");
+
+        MainPlayer.onSpriteChange += updateSprite;
+    }
+
+    private void updateSprite(Sprite newSprite)
+    {
+        _spriteRenderer.sprite = newSprite;
+    }
+
+    private void OnDestroy()
+    {
+        MainPlayer.onSpriteChange -= updateSprite;
     }
 
     // Update is called once per frame

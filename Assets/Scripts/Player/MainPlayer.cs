@@ -13,6 +13,9 @@ public class MainPlayer : MonoBehaviour
 
     private static readonly int IsMoving = Animator.StringToHash("IsMoving");
 
+    public delegate void OnSpriteChange(Sprite newSprite);
+    public static event OnSpriteChange onSpriteChange;
+
     private void Awake()
     {
         if (instance == null)
@@ -27,7 +30,7 @@ public class MainPlayer : MonoBehaviour
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Animator = GetComponentInChildren<Animator>();
 
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void ChangePlayerAnimator(int index)
@@ -37,14 +40,15 @@ public class MainPlayer : MonoBehaviour
         Animator.runtimeAnimatorController = AniController[index];
     }
 
-    // 미니게임시 캐릭터 스프라이트 전환
+    // 버튼 클릭시 스프라이트 변경
     public void ChangePlayerSprite(string name)
     {
         Animator.SetBool(IsMoving, true);
-        //Debug.Log($"path : CharaSprite/{name}/{name}_idle_anim_16x16");
-        //if (Resources.Load<Sprite>($"CharaSprite/{name}/_{name}_run_16x16_2") == null)
-        //    Debug.Log("ChangePlayerSprite : CharaSprite is null");
-        //else
-        //    SpriteRenderer.sprite = Resources.Load<Sprite>($"CharaSprite/{name}/_{name}_run_16x16_2");
+        Sprite newSprite = Resources.Load<Sprite>($"CharaSprite/{name}/_{name}_run_16x16_2");
+        if (newSprite != null)
+        {
+            SpriteRenderer.sprite = newSprite;
+            onSpriteChange?.Invoke(newSprite); // 이벤트 처리
+        }
     }
 }
